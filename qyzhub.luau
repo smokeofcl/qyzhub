@@ -128,7 +128,7 @@ local PlayerConfig = {
 }
 local ServerConfig = { AdminAlert = false }
 
-local EspDistances = { Player = 500, Car = 500, Horse = 1000, Corpse = 500, FactionBanner = 500 }
+local EspDistances = { Player = 3000, Car = 3000, Horse = 3000, Corpse = 3000, FactionBanner = 3000 }
 local EspColors = {
     Highlights = CorPadrao, Hitbox = CorPadrao, Corpses = CorPadrao, FactionMember = CorPadrao, FactionBanner = CorPadrao,
     Cars = CorPadrao, Horses = CorPadrao,
@@ -4216,7 +4216,7 @@ local function criarInterface()
     n("Frame", 232, "Background", { P = UO(511, 41), S = UO(1022, 82), BC = G(0), BT = 0.55 })
     n("UICorner", 233, nil, { CR = 20 })
     n("TextLabel", 232, "FOV Size", { P = UO(102, 41), S = UO(161, 43), Z = 2, BT = 1, T = "FOV Size", TC = G(0.698), TS = 35, F = F("Bold") })
-    n("TextLabel", 232, "0/300", { P = UO(966, 41), S = UO(75, 30), Z = 3, BT = 1, T = "0/300", TC = G(0.698), TS = 25, F = F("Bold") })
+    n("TextLabel", 232, "0/300", { P = UO(966, 41), S = UO(75, 30), Z = 3, BT = 1, T = "3000/3000", TC = G(0.698), TS = 25, F = F("Bold") })
     n("Frame", 232, "slider6", { P = UO(677, 41), S = UO(423, 31), Z = 4, BT = 1 })
     n("Frame", 237, "Rectangle 30", { P = UO(212, 15), S = UO(423, 12), BC = G(0.698) })
     n("UICorner", 238, nil, { CR = 15 })
@@ -4389,7 +4389,7 @@ local function criarInterface()
     n("Frame", 405, "Background", { P = UO(511, 41), S = UO(1022, 82), BC = G(0), BT = 0.55 })
     n("UICorner", 406, nil, { CR = 20 })
     n("TextLabel", 405, "Fly Speed", { P = UO(112, 41), S = UO(179, 43), Z = 2, BT = 1, T = "Fly Speed", TC = G(0.698), TS = 35, F = F("Bold") })
-    n("TextLabel", 405, "0/300", { P = UO(966, 41), S = UO(75, 30), Z = 3, BT = 1, T = "0/300", TC = G(0.698), TS = 25, F = F("Bold") })
+    n("TextLabel", 405, "0/300", { P = UO(966, 41), S = UO(75, 30), Z = 3, BT = 1, T = "3000/3000", TC = G(0.698), TS = 25, F = F("Bold") })
     n("Frame", 405, "slider10", { P = UO(677, 41), S = UO(423, 31), Z = 4, BT = 1 })
     n("Frame", 410, "Rectangle 30", { P = UO(212, 15), S = UO(423, 12), BC = G(0.698) })
     n("UICorner", 411, nil, { CR = 15 })
@@ -4467,8 +4467,8 @@ local function criarInterface()
     n("UICorner", 483, nil, { CR = 20 })
     n("Circulo", 482, "Ellipse 15", { P = UO(26, 23), S = UO(42, 42), Z = 2 })
     n("ScrollingFrame", 42, "Visuals", { P = UO(591, 555), S = UO(1129, 1075), Z = 6, BT = 1, CanvasSize = UO(0, 0), AutomaticCanvasSize = Enum.AutomaticSize.Y, ScrollBarThickness = 2, ScrollBarImageTransparency = 1, ScrollingDirection = Enum.ScrollingDirection.Y })
-    n("Frame", 486, "ESP Colors", { P = UO(564, 3274), S = UO(1056, 1950), BT = 1 })
-    n("Frame", 487, "Background", { P = UO(528, 975), S = UO(1056, 1950), BC = G(0), BT = 0.55 })
+    n("Frame", 486, "ESP Colors", { P = UO(564, 3274), S = UO(1056, 2700), BT = 1 })
+    n("Frame", 487, "Background", { P = UO(528, 1350), S = UO(1056, 2700), BC = G(0), BT = 0.55 })
     n("UICorner", 488, nil, { CR = 20 })
     n("TextLabel", 487, "ESP Colors", { P = UO(138, 50), S = UO(197, 43), Z = 2, BT = 1, T = "ESP Colors", TC = G(1), TS = 35, F = F("Bold") })
     n("Seta", 487, "seta", { P = UO(1013, 36), S = UO(20, 31), R = -90, Z = 3, IC = C3(0.3558, 0.3455, 0.3455), IT = 0.55 })
@@ -4568,7 +4568,39 @@ local function criarInterface()
     n("TextButton", 572, "Verde", { P = UO(819, 160), S = UO(102, 102), Z = 7, BC = C3(0, 0.502, 0) })
     n("UICorner", 585, nil, { CR = 20 })
     n("TextLabel", 572, "Set Tracer color", { P = UO(165, 47), S = UO(286, 43), Z = 8, BT = 1, T = "Set Tracer color", TC = G(0.698), TS = 35, F = F("Bold") })
-    n("Frame", 486, "ESP Distances", { P = UO(564, 1952), S = UO(1056, 635), Z = 2, BT = 1 })
+    n("Frame", 487, "Set Horses Color", { P = UO(528, 2054), S = UO(1022, 283), Z = 10, BT = 1 })
+    n("Frame", 605, "Background", { P = UO(511, 142), S = UO(1022, 283), BC = G(0), BT = 0.55 })
+    n("UICorner", 606, nil, { CR = 20 })
+    n("TextButton", 605, "Preto", { P = UO(204, 160), S = UO(102, 102), Z = 2, BC = G(0) })
+    n("UICorner", 607, nil, { CR = 20 })
+    n("TextButton", 605, "Branco", { P = UO(327, 160), S = UO(102, 102), Z = 3, BC = G(1) })
+    n("UICorner", 608, nil, { CR = 20 })
+    n("TextButton", 605, "Amarelo", { P = UO(450, 160), S = UO(102, 102), Z = 4, BC = C3(1, 1, 0) })
+    n("UICorner", 609, nil, { CR = 20 })
+    n("TextButton", 605, "Roxo", { P = UO(573, 160), S = UO(102, 102), Z = 5, BC = C3(0.502, 0, 0.502) })
+    n("UICorner", 610, nil, { CR = 20 })
+    n("TextButton", 605, "Vermelho", { P = UO(696, 160), S = UO(102, 102), Z = 6, BC = C3(1, 0, 0) })
+    n("UICorner", 611, nil, { CR = 20 })
+    n("TextButton", 605, "Verde", { P = UO(819, 160), S = UO(102, 102), Z = 7, BC = C3(0, 0.502, 0) })
+    n("UICorner", 612, nil, { CR = 20 })
+    n("TextLabel", 605, "Set Horses color", { P = UO(181, 47), S = UO(318, 43), Z = 8, BT = 1, T = "Set Horses color", TC = G(0.698), TS = 35, F = F("Bold") })
+    n("Frame", 487, "Set Cars Color", { P = UO(528, 2350), S = UO(1022, 283), Z = 11, BT = 1 })
+    n("Frame", 620, "Background", { P = UO(511, 142), S = UO(1022, 283), BC = G(0), BT = 0.55 })
+    n("UICorner", 621, nil, { CR = 20 })
+    n("TextButton", 620, "Preto", { P = UO(204, 160), S = UO(102, 102), Z = 2, BC = G(0) })
+    n("UICorner", 622, nil, { CR = 20 })
+    n("TextButton", 620, "Branco", { P = UO(327, 160), S = UO(102, 102), Z = 3, BC = G(1) })
+    n("UICorner", 623, nil, { CR = 20 })
+    n("TextButton", 620, "Amarelo", { P = UO(450, 160), S = UO(102, 102), Z = 4, BC = C3(1, 1, 0) })
+    n("UICorner", 624, nil, { CR = 20 })
+    n("TextButton", 620, "Roxo", { P = UO(573, 160), S = UO(102, 102), Z = 5, BC = C3(0.502, 0, 0.502) })
+    n("UICorner", 625, nil, { CR = 20 })
+    n("TextButton", 620, "Vermelho", { P = UO(696, 160), S = UO(102, 102), Z = 6, BC = C3(1, 0, 0) })
+    n("UICorner", 626, nil, { CR = 20 })
+    n("TextButton", 620, "Verde", { P = UO(819, 160), S = UO(102, 102), Z = 7, BC = C3(0, 0.502, 0) })
+    n("UICorner", 627, nil, { CR = 20 })
+    n("TextLabel", 620, "Set Cars color", { P = UO(181, 47), S = UO(318, 43), Z = 8, BT = 1, T = "Set Cars color", TC = G(0.698), TS = 35, F = F("Bold") })
+    n("Frame", 486, "ESP Distances", { P = UO(564, 2650), S = UO(1056, 635), Z = 2, BT = 1 })
     n("Frame", 588, "Background", { P = UO(528, 318), S = UO(1056, 635), BC = G(0), BT = 0.55 })
     n("UICorner", 589, nil, { CR = 20 })
     n("TextLabel", 588, "ESP Distances", { P = UO(170, 49), S = UO(262, 43), Z = 2, BT = 1, T = "ESP Distances", TC = G(1), TS = 35, F = F("Bold") })
@@ -4577,7 +4609,7 @@ local function criarInterface()
     n("Frame", 593, "Background", { P = UO(511, 41), S = UO(1022, 82), BC = G(0), BT = 0.55 })
     n("UICorner", 594, nil, { CR = 20 })
     n("TextLabel", 593, "Faction Banner", { P = UO(163, 41), S = UO(282, 43), Z = 2, BT = 1, T = "Faction Banner", TC = G(0.698), TS = 35, F = F("Bold") })
-    n("TextLabel", 593, "0/300", { P = UO(966, 41), S = UO(75, 30), Z = 3, BT = 1, T = "0/300", TC = G(0.698), TS = 25, F = F("Bold") })
+    n("TextLabel", 593, "0/300", { P = UO(966, 41), S = UO(75, 30), Z = 3, BT = 1, T = "3000/3000", TC = G(0.698), TS = 25, F = F("Bold") })
     n("Frame", 593, "slider5", { P = UO(677, 41), S = UO(423, 31), Z = 4, BT = 1 })
     n("Frame", 598, "Rectangle 30", { P = UO(212, 15), S = UO(423, 12), BC = G(0.698) })
     n("UICorner", 599, nil, { CR = 15 })
@@ -4586,7 +4618,7 @@ local function criarInterface()
     n("Frame", 602, "Background", { P = UO(511, 41), S = UO(1022, 82), BC = G(0), BT = 0.55 })
     n("UICorner", 603, nil, { CR = 20 })
     n("TextLabel", 602, "Corpse ESP Distance", { P = UO(212, 41), S = UO(380, 43), Z = 2, BT = 1, T = "Corpse ESP Distance", TC = G(0.698), TS = 35, F = F("Bold") })
-    n("TextLabel", 602, "0/300", { P = UO(966, 41), S = UO(75, 30), Z = 3, BT = 1, T = "0/300", TC = G(0.698), TS = 25, F = F("Bold") })
+    n("TextLabel", 602, "0/300", { P = UO(966, 41), S = UO(75, 30), Z = 3, BT = 1, T = "3000/3000", TC = G(0.698), TS = 25, F = F("Bold") })
     n("Frame", 602, "slider4", { P = UO(677, 41), S = UO(423, 31), Z = 4, BT = 1 })
     n("Frame", 607, "Rectangle 30", { P = UO(212, 15), S = UO(423, 12), BC = G(0.698) })
     n("UICorner", 608, nil, { CR = 15 })
@@ -4595,7 +4627,7 @@ local function criarInterface()
     n("Frame", 611, "Background", { P = UO(511, 41), S = UO(1022, 82), BC = G(0), BT = 0.55 })
     n("UICorner", 612, nil, { CR = 20 })
     n("TextLabel", 611, "Horse ESP Distance", { P = UO(202, 41), S = UO(360, 43), Z = 2, BT = 1, T = "Horse ESP Distance", TC = G(0.698), TS = 35, F = F("Bold") })
-    n("TextLabel", 611, "0/300", { P = UO(966, 41), S = UO(75, 30), Z = 3, BT = 1, T = "0/300", TC = G(0.698), TS = 25, F = F("Bold") })
+    n("TextLabel", 611, "0/300", { P = UO(966, 41), S = UO(75, 30), Z = 3, BT = 1, T = "3000/3000", TC = G(0.698), TS = 25, F = F("Bold") })
     n("Frame", 611, "slider3", { P = UO(677, 41), S = UO(423, 31), Z = 4, BT = 1 })
     n("Frame", 616, "Rectangle 30", { P = UO(212, 15), S = UO(423, 12), BC = G(0.698) })
     n("UICorner", 617, nil, { CR = 15 })
@@ -4604,7 +4636,7 @@ local function criarInterface()
     n("Frame", 620, "Background", { P = UO(511, 41), S = UO(1022, 82), BC = G(0), BT = 0.55 })
     n("UICorner", 621, nil, { CR = 20 })
     n("TextLabel", 620, "Car ESP Distance", { P = UO(179, 41), S = UO(315, 43), Z = 2, BT = 1, T = "Car ESP Distance", TC = G(0.698), TS = 35, F = F("Bold") })
-    n("TextLabel", 620, "0/300", { P = UO(966, 41), S = UO(75, 30), Z = 3, BT = 1, T = "0/300", TC = G(0.698), TS = 25, F = F("Bold") })
+    n("TextLabel", 620, "0/300", { P = UO(966, 41), S = UO(75, 30), Z = 3, BT = 1, T = "3000/3000", TC = G(0.698), TS = 25, F = F("Bold") })
     n("Frame", 620, "slider2", { P = UO(677, 41), S = UO(423, 31), Z = 4, BT = 1 })
     n("Frame", 625, "Rectangle 30", { P = UO(212, 15), S = UO(423, 12), BC = G(0.698) })
     n("UICorner", 626, nil, { CR = 15 })
@@ -4613,7 +4645,7 @@ local function criarInterface()
     n("Frame", 629, "Background", { P = UO(511, 41), S = UO(1022, 82), BC = G(0), BT = 0.55 })
     n("UICorner", 630, nil, { CR = 20 })
     n("TextLabel", 629, "Player ESP Distance", { P = UO(206, 41), S = UO(368, 43), Z = 2, BT = 1, T = "Player ESP Distance", TC = G(0.698), TS = 35, F = F("Bold") })
-    n("TextLabel", 629, "0/300", { P = UO(966, 41), S = UO(75, 30), Z = 3, BT = 1, T = "0/300", TC = G(0.698), TS = 25, F = F("Bold") })
+    n("TextLabel", 629, "0/300", { P = UO(966, 41), S = UO(75, 30), Z = 3, BT = 1, T = "3000/3000", TC = G(0.698), TS = 25, F = F("Bold") })
     n("Frame", 629, "slider1", { P = UO(677, 41), S = UO(423, 31), Z = 4, BT = 1 })
     n("Frame", 634, "Rectangle 30", { P = UO(212, 15), S = UO(423, 12), BC = G(0.698) })
     n("UICorner", 635, nil, { CR = 15 })
@@ -4884,6 +4916,37 @@ painel:AoMudar("ESP Colors/Set Faction Banner Color", function(c)
         if model and model.Parent and data.nameLabel then data.nameLabel.TextColor3 = c end
     end
 end)
+painel:AoMudar("ESP Colors/Set Horses Color", function(c)
+    EspColors.Horses = c
+    for model, data in pairs(HorseEspObjects) do
+        if model and model.Parent then
+            local isSkeleton = model:GetAttribute("SkeletonHorse") == true
+            if not isSkeleton then
+                if data.nameLabel then data.nameLabel.TextColor3 = c end
+                if data.highlight then
+                    data.highlight.FillColor = c
+                    data.highlight.OutlineColor = c
+                end
+            end
+        end
+    end
+end)
+painel:AoMudar("ESP Colors/Set Cars Color", function(c)
+    EspColors.Cars = c
+    for model, data in pairs(CarEspObjects) do
+        if model and model.Parent then
+            if data.billboard then
+                for _, child in ipairs(data.billboard:GetChildren()) do
+                    if child:IsA("TextLabel") then child.TextColor3 = c end
+                end
+            end
+            if data.highlight then
+                data.highlight.FillColor = c
+                data.highlight.OutlineColor = c
+            end
+        end
+    end
+end)
 
 -- [ Combat > Combat ]
 painel:AoMudar("Combat/Aimbot", function(on) AimbotConfig.Enabled = on end)
@@ -4945,8 +5008,6 @@ painel:AoMudar("Vehicle Movement/Bring Nearest Car", function(nome)
             break
         end
     end
-    -- Reset dropdown apos trazer o carro
-    task.delay(0.3, function() painel:Definir("Vehicle Movement/Bring Nearest Car", nil, true) end)
 end)
 
 -- [ Movement > Horse Movement ]
@@ -5078,6 +5139,8 @@ initCor("ESP Colors/Set Hitbox Color", EspColors.Hitbox)
 initCor("ESP Colors/Set Corpses Color", EspColors.Corpses)
 initCor("ESP Colors/Set Faction Member Color", EspColors.FactionMember)
 initCor("ESP Colors/Set Faction Banner Color", EspColors.FactionBanner)
+initCor("ESP Colors/Set Horses Color", EspColors.Horses)
+initCor("ESP Colors/Set Cars Color", EspColors.Cars)
 initCor("FOV/Fov Color", AimbotConfig.FOVColor)
 
 -- [ Salvamento automatico ] -- / Qualquer toggle, slider ou cor grava a ultima config
