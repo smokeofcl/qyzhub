@@ -3550,9 +3550,9 @@ function Painel:_preencherPerfil()
         usuario.Text = "@" .. jogador.Name
     end
     if avatar and avatar:IsA("ImageLabel") then
-        -- [ script ] -- / a foto fica dentro de um circulo, a cor da imagem vira o fundo enquanto ela carrega
+        -- [ script ] -- / a foto fica dentro de um circulo, fundo transparente
         avatar.BackgroundColor3 = avatar.ImageColor3
-        avatar.BackgroundTransparency = 0
+        avatar.BackgroundTransparency = 1
 
         local canto = Instance.new("UICorner")
         canto.CornerRadius = UDim.new(1, 0)
@@ -3989,7 +3989,7 @@ local function criarInterface()
     n("Frame", 5, "Background", { P = UO(285, 555), S = UO(570, 1109), BC = C3(0.0529, 0.0491, 0.0491) })
     n("UICorner", 6, nil, { CR = 35 })
     n("Frame", 5, "Profile", { P = UO(285, 1005), S = UO(545, 164), Z = 2, BT = 1 })
-    n("Frame", 8, "Background", { P = UO(273, 82), S = UO(545, 164), BC = G(0), BT = 0.55 })
+    n("Frame", 8, "Background", { P = UO(273, 82), S = UO(545, 164), BC = G(0), BT = 1 })
     n("UICorner", 9, nil, { CR = 20 })
     n("TextLabel", 8, "Name", { P = UO(228, 63), S = UO(94, 37), Z = 2, BT = 1, T = "Name", TC = G(1), TS = 30, F = F("Bold") })
     n("TextLabel", 8, "Username", { P = UO(262, 100), S = UO(162, 37), Z = 3, BT = 1, T = "Username", TC = G(0.698), TS = 30, TextTransparency = 0.55, F = F("Bold") })
